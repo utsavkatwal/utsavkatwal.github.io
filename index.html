@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NAVBAR</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <nav >
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-      </label>
-        <label class="logo"> <a href="#"> CSIT ACADEMY</a>
-        </label>
-        <ul >
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">ABOUT</a></li>
+  <nav>
     
-    <li><a href="#">CONTACT</a></li>
-    <li><a href="https://bit.ly/39zSJP3">STUDY MATERIAL</a></li>
-</ul>
-    </nav>
- 
+    <ul class="menu">
+      <li class="logo"><a href="#">DjangoX</a></li>
+      <li class="list"><a href="#">Home</a></li>
+      <li class="list"><a href="#">About</a></li>
+      <li class="list"><a href="#">contact</a></li>
+      <li class="list"><a href="#">more</a></li>
+      <li class="toggle"><span class="bars"></span></li>
+       
+     </ul>
+   </nav>
+   <script>
+  $(function() {
+
+    $(".toggle").on("click",function(){
+   if($(".list").hasClass("active")){
+    $(".list").removeClass("active");
+   }
+else{
+  $(".list").addClass("active");
+}
+    })
+
+});
+
+   </script>
 </body>
 </html>
